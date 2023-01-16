@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: white;
+    text-align: center;
+}   
+
+.container {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 960px;
+    height: 400px;
+    margin: 10px;
+    gap: 10px;
+
+    /*! CONTAINER */
+
+    /*! pohyb celho containeru */
+    align-content: stretch;/*! po riadku cely container */
+    justify-content: stretch; /*! po stlpcoch cely container */
+
+    /*! pohyb samotnych itemov */
+    align-items: stretch;  /*! pohyb contentu po riadkoch */
+    justify-items: stretch; /*! pohyb contentu po stlpcoch */
+
+}
+
+.container div{
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+.container div:nth-child(even){ /*! even = kazdy druhy  */
+    background-color: blue;
+    color: white;
+}
+
+.item1{
+    /*! ITEM */
+    justify-self: center; /*! pohyb contentu po riadkoch */
+    align-self: center; /*! pohyb contentu po stlpcoch */
+}
+
+.item2{
+    justify-self: stretch;
+    align-self: center;
+}
+
+.item5{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    /*!grid-column: 2/4;  odkial kam*/
+    /*!grid-column: 2/span 2;  tolko kolko chcem aby bol*/
+}
